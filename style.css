@@ -1,0 +1,140 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 750px;
+    text-align: center;
+}
+
+h1 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+/* Tab Container */
+.tab-container {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Tab Buttons */
+.tab-buttons {
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid #334155;
+    margin-bottom: 25px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px;
+
+    background: transparent;
+    border: none;
+
+    color: #94a3b8;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.tab-btn:hover {
+    color: #38bdf8;
+    background: #263449;
+}
+
+/* Active Tab Highlight */
+.tab-btn.active {
+    color: #38bdf8;
+    border-bottom: 3px solid #38bdf8;
+    background: #263449;
+}
+
+/* Content Styling */
+.tab-content {
+    display: none;
+    text-align: left;
+    padding: 20px 10px;
+}
+
+/* Display Active Content */
+.tab-content.active {
+    display: block;
+    animation: fadeSlide 0.5s ease;
+}
+
+.tab-content h2 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.tab-content p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Smooth Animation */
+@keyframes fadeSlide {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+
+    .tab-container {
+        padding: 15px;
+    }
+
+    .tab-buttons {
+        gap: 2px;
+    }
+
+    .tab-btn {
+        font-size: 13px;
+        padding: 12px 5px;
+    }
+
+}
