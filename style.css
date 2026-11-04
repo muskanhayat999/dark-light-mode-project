@@ -1,0 +1,158 @@
+
+/* Default Light Theme */
+
+:root {
+    --bg-color: #f4f6fb;
+    --text-color: #22223b;
+    --card-color: #ffffff;
+    --button-color: #6c63ff;
+    --border-color: #dddddd;
+}
+
+/* Dark Theme */
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-color: #1e1e2f;
+    --button-color: #8b80ff;
+    --border-color: #444444;
+}
+
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    transition: background-color 0.5s ease,
+                color 0.5s ease;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 8%;
+    background-color: var(--card-color);
+
+    transition: background-color 0.5s ease;
+}
+
+/* Toggle Button */
+
+.toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+
+    background-color: var(--button-color);
+    color: white;
+
+    font-size: 15px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.05);
+}
+
+#theme-icon {
+    font-size: 20px;
+}
+
+/* Main Content */
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 30px;
+    gap: 25px;
+}
+
+.content h1 {
+    font-size: 40px;
+}
+
+.content p {
+    max-width: 550px;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+/* Explore Button */
+
+.explore-btn {
+    padding: 13px 28px;
+    background-color: var(--button-color);
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    transform: translateY(-4px);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+
+    background-color: var(--card-color);
+    border-top: 1px solid var(--border-color);
+
+    transition: background-color 0.5s ease;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 15px;
+    }
+
+}
